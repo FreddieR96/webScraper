@@ -8,8 +8,8 @@ worksheet = workbook.add_worksheet
 b = 0
 while page.at('#btn_searchresults_next a') do
 resultsarray = page.css('.mapview-details-content li')
-begin
 resultsarray.each do |f|
+begin
 title = f.at('.mapview-details-header').text.strip
 location = f.at('.fcaddress').text.strip
 link = page.link_with(text: title)
